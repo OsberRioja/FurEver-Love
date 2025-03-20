@@ -16,5 +16,7 @@ kotlin {
 
 dependencies {
     implementation(project(":domain"))
+    implementation(project(":domain"))
+    implementation(project(":domain"))
     // Otras dependencias, por ejemplo, para networking o base de datos
 }
