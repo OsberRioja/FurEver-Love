@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "FurEver Love"
 include(":app")
- 
+include(":domain")
+include(":framework")
+include(":data")
+include(":usecase")
