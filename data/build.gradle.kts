@@ -13,3 +13,8 @@ kotlin {
         jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
     }
 }
+
+dependencies {
+    implementation(project(":domain"))
+    // Otras dependencias, por ejemplo, para networking o base de datos
+}
