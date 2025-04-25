@@ -85,6 +85,10 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
+    implementation ("com.google.firebase:firebase-auth:22.1.2")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
 
     implementation(project(":usecases"))
     implementation(project(":domain"))
