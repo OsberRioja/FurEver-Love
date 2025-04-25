@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -26,9 +27,12 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "11"
+        jvmTarget = "1.8"
     }
 }
 
@@ -42,4 +46,31 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+
+    implementation(libs.retrofit)
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.converter.moshi)
+    ksp(libs.moshi.ksp)
+
+    //room
+    implementation(libs.bundles.room)
+    ksp(libs.room.compiler)
+    annotationProcessor(libs.room.compiler)
+    testImplementation(libs.room.testing)
+
+
+    debugImplementation(libs.chucker)
+    releaseImplementation(libs.chucker.no.op)
+
+    implementation(project(":data"))
+    implementation(project(":domain"))
 }
+
+
+
+
+
+
